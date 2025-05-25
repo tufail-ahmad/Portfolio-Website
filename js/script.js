@@ -51,7 +51,7 @@ if (window.innerWidth >= 992) {
     ".home-img, .services-container, .portfolio-box, .contact form",
     { origin: "bottom" }
   );
-  ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
+  ScrollReveal().reveal(".home-content h1, .about-img,", { origin: "left" });
   ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 }
 
@@ -62,4 +62,12 @@ const typed = new Typed(".multiple-text", {
   backSpeed: 100,
   backDelay: 1000,
   loop: true,
+});
+
+/*==================== progress bar ====================*/
+const spans = document.querySelectorAll(".progress-container span");
+
+spans.forEach((span) => {
+  span.style.width = span.dataset.width;
+  span.innerHTML = span.dataset.width;
 });
